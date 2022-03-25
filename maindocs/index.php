@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header">
-            <img class="headerlogo" src="/pictures/miepsushi.jpg" alt="">
+            <img class="headerlogo" src="../pictures/miepsushi.jpg" alt="">
             <div class="header-right">
                 <a class="active" href="index.php">Home</a>
                 <a href="bestellen.php">Bestellen</a>

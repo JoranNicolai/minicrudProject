@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="header">
-            <img class="headerlogo" src="/pictures/miepsushi.jpg" alt="">
+            <img class="headerlogo" src="../pictures/miepsushi.jpg" alt="">
             <div class="header-right">
                 <a class="active" href="index.php">Home</a>
                 <a href="bestellen.php">Bestellen</a>
@@ -45,7 +45,7 @@ if (isset($_POST["date"])) {
             <input type="email" required name="email" value="" />
             <label for="res_tel">Telefoon</label>
             <input type="text" required name="tel" value="" />
-            <label for="res_notes">Notities</label>
+            <label for="res_notes">Personen</label>
             <input type="text" name="notes" value="" />
             <?php
     $mindate = date("Y-m-d");

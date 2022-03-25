@@ -1,92 +1,91 @@
 <?php
 
-// session_start();
+ session_start();
  
 
-// if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-//     header("location: login.php");
-//     exit;
-// }
+ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+     header("location: login.php");
+     exit;
+ }
  
 
-// require_once "config.php";
+ require_once "config.php";
  
 
-// $username = $password = "";
-// $username_err = $password_err = $login_err = "";
+ $username = $password = "";
+ $username_err = $password_err = $login_err = "";
  
 
-// if($_SERVER["REQUEST_METHOD"] == "POST"){
+ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
 
-//     if(empty(trim($_POST["username"]))){
-//         $username_err = "Voer uw gebruikersnaam in.";
-//     } else{
-//         $username = trim($_POST["username"]);
-//     }
+     if(empty(trim($_POST["username"]))){
+         $username_err = "Voer uw gebruikersnaam in.";
+     } else{
+         $username = trim($_POST["username"]);
+     }
     
-//     // Check if password is empty
-//     if(empty(trim($_POST["password"]))){
-//         $password_err = "Voer uw wachtwoord in.";
-//     } else{
-//         $password = trim($_POST["password"]);
-//     }
+     if(empty(trim($_POST["password"]))){
+         $password_err = "Voer uw wachtwoord in.";
+     } else{
+         $password = trim($_POST["password"]);
+     }
     
 
-//     if(empty($username_err) && empty($password_err)){
+     if(empty($username_err) && empty($password_err)){
 
-//         $sql = "SELECT id, username, password FROM users WHERE username = ?";
+         $sql = "SELECT id, username, password FROM users WHERE username = ?";
         
-//         if($stmt = mysqli_prepare($link, $sql)){
+         if($stmt = mysqli_prepare($link, $sql)){
             
-//             mysqli_stmt_bind_param($stmt, "s", $param_username);
-            
-            
-//             $param_username = $username;
+             mysqli_stmt_bind_param($stmt, "s", $param_username);
             
             
-//             if(mysqli_stmt_execute($stmt)){
+             $param_username = $username;
+            
+            
+             if(mysqli_stmt_execute($stmt)){
                 
-//                 mysqli_stmt_store_result($stmt);
+                 mysqli_stmt_store_result($stmt);
                 
                 
-//                 if(mysqli_stmt_num_rows($stmt) == 1){                    
+                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     
-//                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
-//                     if(mysqli_stmt_fetch($stmt)){
-//                         if(password_verify($password, $hashed_password)){
+                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                     if(mysqli_stmt_fetch($stmt)){
+                         if(password_verify($password, $hashed_password)){
                             
-//                             session_start();
-                            
-                            
-//                             $_SESSION["loggedin"] = true;
-//                             $_SESSION["id"] = $id;
-//                             $_SESSION["username"] = $username;                            
+                             session_start();
                             
                             
-//                             header("location: welcome.php");
-//                         } else{
+                             $_SESSION["loggedin"] = true;
+                             $_SESSION["id"] = $id;
+                             $_SESSION["username"] = $username;                            
                             
-//                             $login_err = "Ongeldige gebruikersnaam of wachtwoord.";
-//                         }
-//                     }
-//                 } else{
+                            
+                             header("location: backend.php");
+                         } else{
+                            
+                             $login_err = "Ongeldige gebruikersnaam of wachtwoord.";
+                         }
+                     }
+                 } else{
                     
-//                     $login_err = "Ongeldige gebruikersnaam of wachtwoord.";
-//                 }
-//             } else{
-//                 echo "
-//                 Oeps! Er is iets fout gegaan. Probeer het later opnieuw.";
-//             }
+                     $login_err = "Ongeldige gebruikersnaam of wachtwoord.";
+                 }
+             } else{
+                 echo "
+                 Oeps! Er is iets fout gegaan. Probeer het later opnieuw.";
+             }
 
 
-//             mysqli_stmt_close($stmt);
-//         }
-//     }
+             mysqli_stmt_close($stmt);
+         }
+     }
     
 
-//     mysqli_close($link);
-// }
+     mysqli_close($link);
+ }
 ?>
 
 <!DOCTYPE html>
@@ -110,7 +109,7 @@
 <body>
     <header>
         <div class="header">
-            <img class="headerlogo" src="/pictures/miepsushi.jpg" alt="">
+            <img class="headerlogo" src="../pictures/miepsushi.jpg" alt="">
             <div class="header-right">
                 <a class="active" href="index.php">Home</a>
                 <a href="bestellen.php">Bestellen</a>
@@ -123,7 +122,7 @@
     </header>
 
     <main class="loginmain">
-        <!-- <div class="outsidelogin">
+        <div class="outsidelogin">
 
             <?php 
         if(!empty($login_err)){
@@ -153,7 +152,7 @@
                 </div>
         </div>
         </form>
-        </div> -->
+        </div>
     </main>
 
     <footer class="footer-distributed">

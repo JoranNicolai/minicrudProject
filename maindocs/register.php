@@ -116,9 +116,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <header>
         <div class="header">
+            <img class="headerlogo" src="../pictures/miepsushi.jpg" alt="">
             <div class="header-right">
                 <a class="active" href="index.php">Home</a>
-                <a href="menu.php">Menu</a>
                 <a href="bestellen.php">Bestellen</a>
                 <a href="reserveren.php">Reserveren</a>
                 <a href="overons.php">Over ons</a>
