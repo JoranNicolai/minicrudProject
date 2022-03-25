@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/minicrud/css/styles.css">
+    <link rel="stylesheet" href="/minicrudProject/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -13,24 +13,24 @@
 </head>
 
 <body>
-<header>
-    <div class="header">
-        <img class="headerlogo" src="/pictures/miepsushi.jpg" alt="">
-        <div class="header-right">
-            <a class="active" href="index.php">Home</a>
-            <a href="bestellen.php">Bestellen</a>
-            <a href="reserveren.php">Reserveren</a>
-            <a href="overons.php">Over ons</a>
-            <a href="contact.php">Contact</a>
-            <a href="login.php">Inloggen / Aanmelden</a>
+    <header>
+        <div class="header">
+            <img class="headerlogo" src="/pictures/miepsushi.jpg" alt="">
+            <div class="header-right">
+                <a class="active" href="index.php">Home</a>
+                <a href="bestellen.php">Bestellen</a>
+                <a href="reserveren.php">Reserveren</a>
+                <a href="overons.php">Over ons</a>
+                <a href="contact.php">Contact</a>
+                <a href="login.php">Inloggen / Aanmelden</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <main>
         <h1 class="HeadTextOverOns">Restaurant PhP 1795</h1>
         <div class="OverOnsBox">
-            <img class="image8" src="/minicrud/pictures/img8.png" alt="Plattegrond oud">
+            <img class="image8" src="/minicrudProject/pictures/img8.png" alt="Plattegrond oud">
             <p class="UnderHeadTextOverOns">Restaurant PhP 1795 is gelegen in het stadscentrum, een van de mooiste
                 gebouwen van Nijmegen. Het gebouw is een rijksmonument en is tussen 1792 en 1795 gebouwd op de
                 fundamenten van een oud klooster. Aanvankelijk werd dit gebouw gebruikt als arsenaal. Sinds het begin
@@ -48,7 +48,7 @@
                 L-vormig arsdenaal gebouwd op de fundering van een klooster naast de zuidkant van de kapel. Later
                 fungeerde de kapel als katoen- en garenspinnerij, maar later weer als opslagruimte voor militair
                 materieel.
-                </p>
+            </p>
         </div>
 
     </main>

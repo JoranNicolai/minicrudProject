@@ -103,7 +103,7 @@ body {
 
 .imgtest {
   width: 33%;
-  height: 100%;
+  height: 95%;
   padding: 2%;
   border-radius: 10%;
   transition: transform 0.2s;
@@ -154,7 +154,7 @@ body {
 
 .signuptext2 {
   font-size: 18px;
-  color: orange;
+  color: red;
   text-decoration: none;
 }
 
@@ -174,7 +174,7 @@ body {
 }
 
 .contactmain {
-  background-image: url("/pictures/contactimage.jpg");
+  background-image: url("../pictures/contactimage.jpg");
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -183,7 +183,7 @@ body {
 }
 
 .loginmain {
-  background-image: url("/pictures/loginimage.jpg");
+  background-image: url("../pictures/loginimage.jpg");
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
