@@ -102,29 +102,20 @@
     <link rel="icon" href="/minicrudProject/pictures/image.jpg">
     <title>Restaurant - Inloggen / Aanmelden</title>
     <style>
-        .loginmain {
+        .loginbody {
             background-image: url(../pictures/loginimage.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: auto;
 
         }
     </style>
 </head>
 
-<body>
-    <header>
-        <div class="header">
-            <img class="headerlogo" src="../pictures/miepsushi.jpg" alt="">
-            <div class="header-right">
-                <a class="active" href="index.php">Home</a>
-                <a href="bestellen.php">Bestellen</a>
-                <a href="reserveren.php">Reserveren</a>
-                <a href="overons.php">Over ons</a>
-                <a href="contact.php">Contact</a>
-                <a href="login.php">Inloggen / Aanmelden</a>
-            </div>
-        </div>
-    </header>
+<body class="loginbody">
 
-    <main class="loginmain">
+    <main>
         <div class="outsidelogin">
 
             <?php 
@@ -133,22 +124,21 @@
         }        
         ?>
             <div class="signupouter">
-                <p class="signuptext">Heb je geen account? <a class="signuptext2" href="register.php">Maak een
-                        account</a>.</p>
+                <a class="signuptext2" href="register.php">Account aanmaken</a>.</p>
             </div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <div class="form-group">
+                <div class="formss">
                     <label>Naam</label>
-                    <input type="text" name="username"
-                        class=" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                    <input type="text" name="username" placeholder="Naam.."
+                        class=" <?php echo (!empty($username_err)) ? 'Onjuist' : ''; ?>"
                         value="<?php echo $username; ?>">
-                    <span class="invalid-feedback"><?php echo $username_err; ?></span>
+                    <span class="onjuiste-error"><?php echo $username_err; ?></span>
                 </div>
                 <div class="">
                     <label>Wachtwoord</label>
-                    <input type="password" name="password"
-                        class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                    <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                    <input type="password" name="password" placeholder="Wachtwoord.."
+                        class="forms-kleiner <?php echo (!empty($password_err)) ? 'Onjuist' : ''; ?>">
+                    <span class="onjuiste-error"><?php echo $password_err; ?></span>
                 </div>
                 <div class="submitouter">
                     <button type="submit">Inloggen</button>
@@ -158,38 +148,20 @@
         </div>
     </main>
 
-    <footer class="footer-distributed">
-        <div class="footer-left">
-            <p class="footer-links">
-                <a href="index.php" class="link-1">Home</a>
-                <a href="index.php">Menu</a>
-                <a href="bestellen.php">Bestellen</a>
-                <a href="overons.php">Over ons</a>
-                <a href="contact.php">Contact</a>
-            </p>
-            <p class="footer-company-name">Restaurant PhP © 2022</p>
-        </div>
-        <div class="footer-center">
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>Heyendaalseweg 98</span> Nijmegen</p>
+    <div class="headercontent">
+        <header>
+            <div class="headerindex">
+                <div class="header-right">
+                    <a class="active" href="index.php">Home</a>
+                    <a href="reserveren.php">Reserveren</a>
+                    <a href="bestellen.php">Bestellen</a>
+                    <a href="overons.php">Over ons</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="login.php">Inloggen / Aanmelden</a>
+                </div>
             </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>+31 682713669</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">1194390@student.roc-nijmegen.nl</a></p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Over ons</span>
-                Dagelijks geopend vanaf 11.00 uur
-            </p>
-        </div>
-    </footer>
+        </header>
+    </div>
 
 </body>
 

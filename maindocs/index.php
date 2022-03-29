@@ -17,7 +17,7 @@
     <main>
         <div class="indexreserverencontainer">
             <div class="indexreserveren">
-                <a class="reserverenAhref" href="reserveren.php">RESERVEREN</a>
+                <a class="reserverenAhref" href="reserveren.php">Reserveren</a>
             </div>
         </div>
         <div class="indexcontainer">
@@ -41,36 +41,6 @@
                 </div>
             </header>
         </div>
-
-
-<!--        <h1 class="HeadText">TREED BINNEN EN GENIET</h1>-->
-<!--        <div class="ContainerTextPhoto">-->
-<!--            <p class="MiddleText">-->
-<!--                Gelegen in het bruisende centrum van Nijmegen is PhP een horecabedrijf voor mannen en vrouwen van alle-->
-<!--                leeftijden, bestaande uit een modern en trendy grand café en een sfeervol restaurant. Geniet van het-->
-<!--                beste van Franse, Mediterrane, Oosterse, fijne wijnen en heerlijke bierspecialiteiten. Het-->
-<!--                PhP-restaurant is dagelijks geopend en heeft het hele jaar door van alles te doen. Met 300-->
-<!--                parkeerplaatsen ligt de parkeerplaats Marienburg direct naast het PhP restaurant. Je kunt hier elke dag-->
-<!--                komen en betaalt vanaf 18:00 uur slechts € 0,50 per uur.</p>-->
-<!--            <img class="Photoimg4" src="/minicrudProject/pictures/img4.jpg" alt="Foto van eten">-->
-<!--        </div>-->
-<!--        <div class="indexgreybg">-->
-<!--            <div class="allbuttons">-->
-<!--                <div class="indexgreybuttons">-->
-<!--                    <a class="indexgreybuttonstext" href="bestellen.php">Bestellen</a>-->
-<!--                </div>-->
-<!--                <div class="indexgreybuttons">-->
-<!--                    <a class="indexgreybuttonstext" href="reserveren.php">Reserveren</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="whitebg">
-            <img class="imgtest" src="/minicrudProject/pictures/img2.jpg" alt="">
-            <img class="imgtest" src="/minicrudProject/pictures/img1.jpg" alt="">
-            <img class="imgtest" src="/minicrudProject/pictures/img3.jpg" alt="">
-
-        </div>-->
     </main>
 
 

@@ -110,51 +110,45 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="icon" href="/minicrudProject/pictures/image.jpg">
     <title>Restaurant - Registreren</title>
 
+    <style>
+        .registerbody {
+            background-image: url(../pictures/registerimage.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: auto;
+        }
+    </style>
+
 </head>
 
-<body>
+<body class="registerbody">
 
-    <header>
-        <div class="header">
-            <img class="headerlogo" src="../pictures/miepsushi.jpg" alt="">
-            <div class="header-right">
-                <a class="active" href="index.php">Home</a>
-                <a href="bestellen.php">Bestellen</a>
-                <a href="reserveren.php">Reserveren</a>
-                <a href="overons.php">Over ons</a>
-                <a href="contact.php">Contact</a>
-                <a href="login.php">Inloggen / Aanmelden</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="registermain">
-        <div class="transformfix">
-
+    <main>
             <div class="omheensignup">
                 <div class="formsregister">
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-                        <div class="form-group">
+                        <div class="formss">
                             <label>Naam</label>
                             <input type="text" name="username"
                                 class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
                                 value="<?php echo $username; ?>">
                             <span class="invalid-feedback"><?php echo $username_err; ?></span>
                         </div>
-                        <div class="form-group">
+                        <div class="forms-kleiner">
                             <label>Wachtwoord</label>
                             <input type="password" name="password"
-                                class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
+                                class="forms-kleiner <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
                                 value="<?php echo $password; ?>">
-                            <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                            <span class="onjuiste-error"><?php echo $password_err; ?></span>
                         </div>
-                        <div class="form-group">
+                        <div class="forms-kleiner">
                             <label>Wachtwoord opnieuw</label>
                             <input type="password" name="confirm_password"
-                                class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
+                                class="forms-kleiner <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
                                 value="<?php echo $confirm_password; ?>">
-                            <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+                            <span class="onjuiste-error"><?php echo $confirm_password_err; ?></span>
                         </div>
                         <div class="submitouter" <div class="submitinput">
                             <input type="submit" class="submitinput" value="Registreren" name="test1">
@@ -164,43 +158,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </form>
             </div>
         </div>
-        </div>
 
     </main>
 
 
-    <footer class="footer-distributed">
-        <div class="footer-left">
-            <p class="footer-links">
-                <a href="index.php" class="link-1">Home</a>
-                <a href="index.php">Menu</a>
-                <a href="bestellen.php">Bestellen</a>
-                <a href="overons.php">Over ons</a>
-                <a href="contact.php">Contact</a>
-            </p>
-            <p class="footer-company-name">Restaurant PhP © 2022</p>
-        </div>
-        <div class="footer-center">
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>Heyendaalseweg 98</span> Nijmegen</p>
+    <div class="headercontent">
+        <header>
+            <div class="headerindex">
+                <div class="header-right">
+                    <a class="active" href="index.php">Home</a>
+                    <a href="reserveren.php">Reserveren</a>
+                    <a href="bestellen.php">Bestellen</a>
+                    <a href="overons.php">Over ons</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="login.php">Inloggen / Aanmelden</a>
+                </div>
             </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>+31 682713669</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">1194390@student.roc-nijmegen.nl</a></p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Over ons</span>
-                Dagelijks geopend vanaf 11.00 uur
-            </p>
-        </div>
-    </footer>
+        </header>
+    </div>
 </body>
 
 </html>

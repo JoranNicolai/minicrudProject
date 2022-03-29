@@ -225,12 +225,22 @@ body {
   font-size: 24px;
   color: black;
   text-decoration: none;
+  text-shadow: 2px 2px white;
 }
 
 .signuptext2 {
   font-size: 18px;
   color: red;
   text-decoration: none;
+  text-shadow: 0px 0px transparent;
+  margin-left: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #000;
+  background-color: #e1f7b9;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 5px 8px;
 }
 
 .indexgreybuttonstext {
@@ -266,19 +276,6 @@ body {
   background-size: cover;
 }
 
-.registermain {
-  background-image: url("../pictures/registerimage.jpg");
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  transform: rotateY(180deg);
-}
-
-.transformfix {
-  transform: rotateY(-180deg);
-}
 
 .outercontactcontainer {
   display: flex;
@@ -471,10 +468,12 @@ iframe:hover {
   align-items: center;
   height: 88vh;
   flex-direction: column;
+  width: 100%;
 }
 
 form {
   padding: 20px;
+  width: 30%;
 }
 
 .contactforms {
@@ -511,14 +510,19 @@ input {
 }
 
 .submitinput {
-  background-color: black;
-  width: 60%;
+  width: 90%;
   height: 50px;
-  color: black;
   font-size: 20px;
   border-radius: 2px;
-  border: none;
   text-shadow: 2px 2px white;
+  margin-left: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #000;
+  background-color: #e1f7b9;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 5px 8px;
 }
 
 .submitinput:hover {
@@ -539,14 +543,18 @@ label {
 }
 
 button {
-  background-color: black;
   width: 60%;
   height: 50px;
-  color: black;
   font-size: 20px;
   border-radius: 2px;
-  border: none;
-  text-shadow: 2px 2px white;
+  margin-left: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #000;
+  background-color: #e1f7b9;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 5px 8px;
 }
 
 button:hover {
