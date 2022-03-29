@@ -37,13 +37,32 @@
         <div class="outercontactcontainer">
             <div class="contactcontainer">
                 <div class="containerforms">
-                    <form class="contactforms" action="verzonden.php" method="post">
+                    <form class="contactforms" method="post">
                         <input type="text" id="voornaam" name="voor_naam" placeholder="Voornaam..">
                         <input type="text" id="achternaam" name="achter_naam" placeholder="Achternaam..">
                         <input type="text" id="email" name="email" placeholder="Email..">
                         <textarea id="subject" name="onderwerp" placeholder="Laat ons iets weten"
                             style="height:70px; width: 100%; resize: none;"></textarea>
                         <input class="submitinput" type="submit" name="submit" value="Verzenden">
+                        <?php
+
+                        if (isset($_POST['submit'])){
+                            if (!empty($voor_naam)) {
+                                echo 'vul je voornaam in!';
+                            }
+                            else if (!empty($achter_naam)) {
+                                echo 'vul je achternaam in!';
+                            }
+                            else if (!empty($email)) {
+                                echo 'vul je email in!';
+                            }
+                            else if (!empty($onderwerp)) {
+                                echo 'vul je onderwerp in!';
+                            }
+
+                        }
+                        ?>
+
                     </form>
                 </div>
             </div>
