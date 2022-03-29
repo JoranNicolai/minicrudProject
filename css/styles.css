@@ -192,7 +192,7 @@ body {
 }
 
 .registermain {
-  background-image: url("/pictures/registerimage.jpg");
+  background-image: url("../pictures/registerimage.jpg");
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -564,7 +564,7 @@ a:hover {
 }
 
 .contactbackimage {
-  width: 70%;
+  width: 65%;
 }
 
 .awdouter {

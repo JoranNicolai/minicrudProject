@@ -19,7 +19,6 @@
 .middlecontainer {
   width: 20%;
   height: 30vh;
-  border: 30px solid black;
 }
 
 .headertext {
@@ -30,7 +29,7 @@
 .h1reservering {
   font-size: 20px;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .buttonmid {

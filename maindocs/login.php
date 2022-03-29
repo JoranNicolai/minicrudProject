@@ -102,7 +102,10 @@
     <link rel="icon" href="/minicrudProject/pictures/image.jpg">
     <title>Restaurant - Inloggen / Aanmelden</title>
     <style>
+        .loginmain {
+            background-image: url(../pictures/loginimage.jpg);
 
+        }
     </style>
 </head>
 

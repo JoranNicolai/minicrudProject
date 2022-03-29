@@ -49,9 +49,6 @@
                 <div class="indexgreybuttons">
                     <a class="indexgreybuttonstext" href="reserveren.php">Reserveren</a>
                 </div>
-                <div class="indexgreybuttons">
-                    <a class="indexgreybuttonstext" href="menu.php">Menu</a>
-                </div>
             </div>
         </div>
 

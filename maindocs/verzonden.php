@@ -11,8 +11,8 @@ if(isset($_POST['submit'])){
     $message2 = "copy van het bericht: " . $first_name . "\n\n" . $_POST['onderwerp'];
     $headers = "Van:" . $from;
     $headers2 = "Van:" . $to;
-    //mail($to,$subject,$message,$headers); Mail Server voor nodig
-    //mail($from,$subject2,$message2,$headers2); Mail Server voor nodig
+    //mail($to,$subject,$message,$headers);
+    //mail($from,$subject2,$message2,$headers2);
 }
 ?>
 

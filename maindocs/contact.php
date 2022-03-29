@@ -13,6 +13,12 @@
     <title>Restaurant - Contact</title>
 </head>
 
+<style>
+    .contactmain {
+        background-image: url(../pictures/registerimage.jpg);
+    }
+</style>
+
 <body>
     <header>
         <div class="header">

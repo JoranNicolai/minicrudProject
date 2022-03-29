@@ -22,13 +22,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         font: 14px sans-serif;
         text-align: center;
     }
+
+    .bigcontainer {
+        background-image: url(../pictures/background.jpg);
+    }
+
+
     </style>
 </head>
 
 <body>
 
-
-
+<main class="mainbackend">
     <h1>Ingelogd als: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
     <p>
         <button><a class="headertext" href="logout.php">Uitloggen</a></button>
@@ -36,20 +41,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     <div class="bigcontainer">
         <div class="middlecontainer">
-            <h1 class="h1reservering">Producten Toevoegen</h1>
-            <div class="buttonmid"><button><a class="h1reservering" href="producten.php">Producten</a></button></div>
+            <div class="buttonmid"><button><a class="h1reservering" href="producten.php">Producten Toevoegen</a></button></div>
 
         </div>
         <div class="middlecontainer">
-            <h1 class="h1reservering">Reserveringen bekijken</h1>
             <div class="buttonmid"><button><a class="h1reservering" href="reserveringen.php">Reserveringen</a></button>
             </div>
         </div>
         <div class="middlecontainer">
-            <h1 class="h1reservering">Accounts bekijken</h1>
             <div class="buttonmid"><button><a class="h1reservering" href="accounts.php">Accounts</a></button></div>
         </div>
     </div>
+</main>
 </body>
 
 </html>
