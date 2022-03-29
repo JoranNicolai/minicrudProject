@@ -13,22 +13,19 @@
     <title>Restaurant - Over Ons</title>
 </head>
 
-<body>
-    <header>
-        <div class="header">
-            <img class="headerlogo" src="../pictures/miepsushi.jpg" alt="">
-            <div class="header-right">
-                <a class="active" href="index.php">Home</a>
-                <a href="bestellen.php">Bestellen</a>
-                <a href="reserveren.php">Reserveren</a>
-                <a href="overons.php">Over ons</a>
-                <a href="contact.php">Contact</a>
-                <a href="login.php">Inloggen / Aanmelden</a>
-            </div>
-        </div>
-    </header>
+<style>
+    .overonsbody {
+        background-image: url(../pictures/pexels-joshua-135018.jpg);
+        background-position: center;
+        background-repeat: repeat-y;
+        background-size: cover;
+        height: auto;
+    }
 
-    <main>
+</style>
+
+<body class="overonsbody">
+
         <h1 class="HeadTextOverOns">Restaurant PhP 1795</h1>
         <div class="OverOnsBox">
             <img class="image8" src="/minicrudProject/pictures/img8.png" alt="Plattegrond oud">
@@ -52,41 +49,21 @@
             </p>
         </div>
 
-    </main>
 
-    <footer class="footer-distributed">
-        <div class="footer-left">
-            <p class="footer-links">
-                <a href="index.php" class="link-1">Home</a>
-                <a href="index.php">Menu</a>
-                <a href="bestellen.php">Bestellen</a>
-                <a href="overons.php">Over ons</a>
-                <a href="contact.php">Contact</a>
-            </p>
-            <p class="footer-company-name">Restaurant PhP © 2022</p>
-        </div>
-        <div class="footer-center">
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>Heyendaalseweg 98</span> Nijmegen</p>
+    <div class="headercontent">
+        <header>
+            <div class="headerindex">
+                <div class="header-right">
+                    <a class="active" href="index.php">Home</a>
+                    <a href="reserveren.php">Reserveren</a>
+                    <a href="bestellen.php">Bestellen</a>
+                    <a href="overons.php">Over ons</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="login.php">Inloggen / Aanmelden</a>
+                </div>
             </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>+31 682713669</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">1194390@student.roc-nijmegen.nl</a></p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Over ons</span>
-                Dagelijks geopend vanaf 11.00 uur
-            </p>
-        </div>
-    </footer>
-
+        </header>
+    </div>
 
 </body>
 
