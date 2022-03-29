@@ -34,10 +34,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
 
 <main class="mainbackend">
-    <h1>Ingelogd als: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
-    <p>
-        <button><a class="headertext" href="logout.php">Uitloggen</a></button>
-    </p>
+    <div class="headerbackend">
+        <h1 class="echovar">Ingelogd als: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+        <p>
+            <button><a class="h1reservering" href="logout.php">Uitloggen</a></button>
+        </p>
+    </div>
+
+
 
     <div class="bigcontainer">
         <div class="middlecontainer">
@@ -52,6 +56,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="buttonmid"><button><a class="h1reservering" href="accounts.php">Accounts</a></button></div>
         </div>
     </div>
+
 </main>
 </body>
 

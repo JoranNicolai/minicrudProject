@@ -46,3 +46,17 @@ button {
   text-decoration: none;
   color: black;
 }
+
+.headerbackend {
+  background-color: black;
+  height: 10vh;
+}
+
+.echovar {
+  color: white;
+}
+
+table {
+  width:100%;
+  width:100%;
+}
