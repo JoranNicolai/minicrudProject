@@ -19,7 +19,7 @@ class Mail {
         $this->mail->isSMTP();
         $this->mail->Host = 'smtp.gmail.com';
         $this->mail->SMTPAuth = true;
-        $this->mail->Username = 'mirzaselimovic2005@gmail.com';
+        $this->mail->Username = '';
         $this->mail->Password = '';
         $this->mail->SMTPSecure = 'tls';
         $this->mail->Port = 587;

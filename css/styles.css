@@ -11,12 +11,6 @@ body {
   background-color: white;
 }
 
-.header {
-  overflow: hidden;
-  padding: 20px 10px;
-  background-color: black;
-}
-
 .headerindex {
   overflow: hidden;
   padding: 20px 10px;
@@ -66,19 +60,6 @@ body {
   }
 }
 
-.ContainerTextPhoto {
-  display: flex;
-}
-
-.HeadText {
-  margin-top: 5%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5%;
-  font-size: 50px;
-  color: red;
-}
-
 #video {
   width: 100vw;
   height: 100vh;
@@ -103,7 +84,7 @@ body {
 .indexcontainer {
   display: flex;
   justify-content: center;
-  height: auto;
+  height: 85vh;
   align-items: center;
 }
 
@@ -135,34 +116,11 @@ body {
 .indexlogo {
   width: 30%;
 }
-
 .h1index {
   color: red;
   font-size: 30px;
 }
 
-.MiddleText {
-  justify-content: left;
-  padding: 4%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  width: 70%;
-  font-size: 20px;
-  color: black;
-}
-
-.Photoimg4 {
-  padding: 4%;
-  width: 45%;
-  height: 500px;
-}
-
-.indexgreybg {
-  width: 100%;
-  height: 500px;
-  background-color: black;
-  display: flex;
-}
 
 .headerlogo {
   width: 5%;
@@ -170,22 +128,6 @@ body {
   border-radius: 10%;
 }
 
-.whitebg {
-  width: 100%;
-  height: 500px;
-}
-
-.imgtest {
-  width: 33%;
-  height: 95%;
-  padding: 2%;
-  border-radius: 10%;
-  transition: transform 0.2s;
-}
-
-.imgtest:hover {
-  transform: scale(1.2);
-}
 
 .allbuttons {
   display: flex;
@@ -195,20 +137,6 @@ body {
   align-items: center;
 }
 
-.indexgreybuttons {
-  width: 20%;
-  height: 100px;
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.2s;
-}
-
-.indexgreybuttons:hover {
-  transform: scale(1.2);
-}
 
 .submitouter {
   display: flex;
@@ -257,25 +185,6 @@ body {
   margin-bottom: 5%;
 }
 
-.contactmain {
-  background-image: url("../pictures/contactimage.jpg");
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.loginmain {
-  background-image: url("../pictures/loginimage.jpg");
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-
 .outercontactcontainer {
   display: flex;
   width: 100%;
@@ -289,11 +198,6 @@ body {
   height: 500px;
   background-color: whitesmoke;
   border-radius: 50%;
-}
-
-.contactcontainer:hover {
-  transform: scale(1.1);
-  border-radius: 30px;
 }
 
 
@@ -311,154 +215,6 @@ iframe:hover {
 .contactheader {
   display: flex;
   justify-content: center;
-}
-
-
-.footer-distributed {
-  background: black;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  width: 100%;
-  text-align: left;
-  font: bold 16px sans-serif;
-  padding: 55px 50px;
-}
-
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.footer-distributed .footer-left {
-  width: 40%;
-}
-
-.footer-distributed h3 {
-  color: #ffffff;
-  font: normal 36px "Open Sans", cursive;
-  margin: 0;
-}
-
-.footer-distributed h3 span {
-  color: lightseagreen;
-}
-
-.footer-distributed .footer-links {
-  color: #ffffff;
-  margin: 20px 0 12px;
-  padding: 0;
-}
-
-.footer-distributed .footer-links a {
-  display: inline-block;
-  line-height: 1.8;
-  font-weight: 400;
-  text-decoration: none;
-  color: red;
-}
-
-.footer-distributed .footer-company-name {
-  color: white;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer-distributed .footer-center {
-  width: 35%;
-}
-
-.footer-distributed .footer-center i {
-  background-color: #33383b;
-  color: #ffffff;
-  font-size: 25px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 42px;
-  margin: 10px 15px;
-  vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
-}
-
-.footer-distributed .footer-center p {
-  display: inline-block;
-  color: #ffffff;
-  font-weight: 400;
-  vertical-align: middle;
-  margin: 0;
-}
-
-.footer-distributed .footer-center p span {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 2;
-}
-
-.footer-distributed .footer-center p a {
-  color: red;
-  text-decoration: none;
-}
-
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight: 300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
-
-.footer-distributed .footer-right {
-  width: 20%;
-}
-
-.footer-distributed .footer-company-about {
-  line-height: 20px;
-  color: red;
-  font-size: 13px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer-distributed .footer-company-about span {
-  display: block;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.footer-distributed .footer-icons {
-  margin-top: 25px;
-}
-
-.footer-distributed .footer-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  background-color: #33383b;
-  border-radius: 2px;
-  font-size: 20px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 35px;
-  margin-right: 3px;
-  margin-bottom: 5px;
 }
 
 .outsidelogin {
@@ -556,6 +312,34 @@ button {
   box-shadow: 5px 8px;
 }
 
+.pauzebutton {
+  width: 10%;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 2px;
+  margin-left: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #000;
+  background-color: #e1f7b9;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 5px 8px;
+}
+
+.pauzebutton:hover {
+  opacity: 1;
+}
+
+.pauzebuttonimg {
+  width: 30%;
+}
+
+.pauzebuttonimg:hover {
+  opacity: 0.5;
+}
+
+
 button:hover {
   opacity: 0.5;
   cursor: pointer;
@@ -632,7 +416,7 @@ a:hover {
 
 .formreserveren {
   width: 30%;
-  border: #0c0101 2px solid;
+  border: 4mm ridge white;
 }
 
 .contactoutercontainer {
@@ -672,25 +456,6 @@ a:hover {
   justify-content: center;
 }
 
-@media (max-width: 880px) {
-  .footer-distributed {
-    font: bold 14px sans-serif;
-  }
-
-  .footer-distributed .footer-left,
-  .footer-distributed .footer-center,
-  .footer-distributed .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  .footer-distributed .footer-center i {
-    margin-left: 0;
-  }
-}
-
 @media screen and (max-width: 770px) {
   .contactbackimage {
     display: none;
@@ -713,144 +478,4 @@ a:hover {
   .indexgreybuttonstext {
     font-size: 20px;
   }
-}
-
-#shopping-cart {
-  margin: 40px;
-}
-
-#product-grid {
-  margin: 40px;
-}
-
-#shopping-cart table {
-  width: 100%;
-  background-color: #f0f0f0;
-}
-
-#shopping-cart table td {
-  background-color: #ffffff;
-}
-
-.txt-heading {
-  color: #211a1a;
-  border-bottom: 1px solid #e0e0e0;
-  overflow: auto;
-}
-
-#buttonLegen {
-  background-color: #ffffff;
-  border: #d00000 1px solid;
-  padding: 5px 10px;
-  color: #d00000;
-  float: right;
-  text-decoration: none;
-  border-radius: 3px;
-  margin: 10px 0px;
-}
-
-#buttonBestellen {
-  background-color: #ffffff;
-  border: green 1px solid;
-  padding: 5px 10px;
-  color: green;
-  float: right;
-  text-decoration: none;
-  border-radius: 3px;
-  margin: 10px 0px;
-}
-
-.buttonouter {
-  width: 28%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.btnAddAction {
-  padding: 5px 10px;
-  margin-left: 5px;
-  background-color: #efefef;
-  border: #e0e0e0 1px solid;
-  color: #211a1a;
-  float: right;
-  text-decoration: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-#product-grid .txt-heading {
-  margin-bottom: 18px;
-}
-
-.product-item {
-  float: left;
-  background: #ffffff;
-  margin: 30px 30px 0px 0px;
-  border: #e0e0e0 1px solid;
-}
-
-.product-image {
-  height: 155px;
-  width: 250px;
-  background-color: #fff;
-}
-
-.clear-float {
-  clear: both;
-}
-
-.demo-input-box {
-  border-radius: 2px;
-  border: #ccc 1px solid;
-  padding: 2px 1px;
-}
-
-.producten-winkelwagen {
-  font-size: 0.9em;
-}
-
-.producten-winkelwagen th {
-  font-weight: normal;
-}
-
-.product-title {
-  margin-bottom: 20px;
-}
-
-.product-price {
-  float: left;
-}
-
-.cart-action {
-  float: right;
-}
-
-.product-quantity {
-  padding: 5px 10px;
-  border-radius: 3px;
-  border: #e0e0e0 1px solid;
-}
-
-.product-tile-footer {
-  padding: 15px 15px 0px 15px;
-  overflow: auto;
-}
-
-.cart-item-image {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: #e0e0e0 1px solid;
-  padding: 5px;
-  vertical-align: middle;
-  margin-right: 15px;
-}
-.no-records {
-  text-align: center;
-  clear: both;
-  margin: 38px 0px;
-}
-
-.bestellenouter {
-  height: 225vh;
 }

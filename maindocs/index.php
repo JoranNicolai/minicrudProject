@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" href="/minicrudProject/pictures/image.jpg">
+    <link rel="icon" href="/minicrudProject/pictures/image.png">
     <title>Restaurant - Home</title>
 </head>
 
@@ -19,6 +19,7 @@
             <div class="indexreserveren">
                 <a class="reserverenAhref" href="reserveren.php">Reserveren</a>
             </div>
+            <button class="pauzebutton" id="pauzebutton" onclick="Pauzeren()"><img class="pauzebuttonimg"  src="../pictures/pauzebutton.png" alt="pauze knop"></button>
         </div>
         <div class="indexcontainer">
             <img class="indexlogo" src="../pictures/indexlogo.png" alt="">
@@ -45,7 +46,20 @@
 
 
 
-    <script src="main.js"></script>
+    <script src="../scripts.js"></script>
+
+    <script>
+        var pauzebutton = document.getElementById("pauzebutton");
+        var video = document.getElementById("video");
+
+        function Pauzeren() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
 
 </body>
 
