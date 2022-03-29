@@ -291,7 +291,7 @@ body {
 .contactcontainer {
   width: 500px;
   height: 500px;
-  background-color: white;
+  background-color: whitesmoke;
   border-radius: 50%;
 }
 
@@ -511,13 +511,14 @@ input {
 }
 
 .submitinput {
-  background-color: red;
+  background-color: black;
   width: 60%;
   height: 50px;
   color: black;
   font-size: 20px;
   border-radius: 2px;
   border: none;
+  text-shadow: 2px 2px white;
 }
 
 .submitinput:hover {
@@ -527,6 +528,7 @@ input {
 label {
   color: black;
   font-size: 18px;
+  font-weight: bold;
   padding: 10px;
 }
 
@@ -537,7 +539,7 @@ label {
 }
 
 button {
-  background-color: #e1f7b9;
+  background-color: black;
   width: 60%;
   height: 50px;
   color: black;
@@ -622,14 +624,16 @@ a:hover {
 }
 
 .formreserveren {
-  width: 50%;
+  width: 30%;
+  border: #0c0101 2px solid;
 }
 
 .contactoutercontainer {
   display: flex;
-  justify-content: center;
-  height: 80vh;
+  justify-content: left;
+  height: 90vh;
   align-items: center;
+  padding-left: 5%;
 }
 
 .contacttext {

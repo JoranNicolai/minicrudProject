@@ -13,7 +13,18 @@
     <title>Restaurant - Reserveren</title>
 </head>
 
-<body>
+<style>
+    .reserverenbody {
+        background-image: url(../pictures/booking.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+    }
+</style>
+
+<body class="reserverenbody">
+
 
     <?php
 // Reservatie proces
@@ -28,13 +39,13 @@ if (isset($_POST["date"])) {
     <div class="contactoutercontainer">
         <form class="formreserveren" id="resForm" method="post" target="_self">
             <label for="res_name">Naam</label>
-            <input type="text" required name="name" value="" />
+            <input type="text" required name="name" value="" placeholder="Naam.." />
             <label for="res_email">Email</label>
-            <input type="email" required name="email" value="" />
+            <input type="email" required name="email" value="" placeholder="Email.." />
             <label for="res_tel">Telefoon</label>
-            <input type="text" required name="tel" value="" />
+            <input type="text" required name="tel" value="" placeholder="Telefoon-nummer.." />
             <label for="res_notes">Personen</label>
-            <input type="text" name="notes" value="" />
+            <input type="text" name="notes" value="" placeholder="Aantal personen.." />
             <?php
     $mindate = date("Y-m-d");
     ?>
