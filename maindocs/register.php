@@ -162,20 +162,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </main>
 
 
-    <div class="headercontent">
-        <header>
-            <div class="headerindex">
-                <div class="header-right">
-                    <a class="active" href="index.php">Home</a>
-                    <a href="reserveren.php">Reserveren</a>
-                    <a href="bestellen.php">Bestellen</a>
-                    <a href="overons.php">Over ons</a>
-                    <a href="contact.php">Contact</a>
-                    <a href="login.php">Inloggen / Aanmelden</a>
-                </div>
-            </div>
-        </header>
-    </div>
 </body>
 
 </html>

@@ -123,9 +123,6 @@
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
         }        
         ?>
-            <div class="signupouter">
-                <a class="signuptext2" href="register.php">Account aanmaken</a>.</p>
-            </div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="formss">
                     <label>Naam</label>

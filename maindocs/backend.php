@@ -39,11 +39,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <p>
             <button><a class="h1reservering" href="logout.php">Uitloggen</a></button>
         </p>
+        <div class="signupouter">
+            <a class="signuptext2" href="register.php">Account aanmaken</a>.</p>
+        </div>
     </div>
 
-
-
     <div class="bigcontainer">
+
         <div class="middlecontainer">
             <div class="buttonmid"><button><a class="h1reservering" href="producten.php">Producten Toevoegen</a></button></div>
 
