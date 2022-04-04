@@ -1,5 +1,5 @@
-history.scrollRestoration = "manual";
-$(window).on("beforeunload", function () {
-  $(window).scrollTop(0);
-});
+console.log("test")
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
