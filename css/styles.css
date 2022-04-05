@@ -81,6 +81,14 @@ body {
   padding: 20px;
 }
 
+.headercontent2 {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
 .indexcontainer {
   display: flex;
   justify-content: center;
@@ -454,6 +462,22 @@ a:hover {
 .registrerenh2 {
   display: flex;
   justify-content: center;
+}
+
+.bestellenbutton {
+  width: 30%;
+}
+
+.bestellenbuttonouter {
+  margin-bottom: 5%;
+}
+
+.bestellenhref {
+  text-decoration: none;
+  color: black;
+}
+
+.bestellentr {
 }
 
 @media screen and (max-width: 770px) {

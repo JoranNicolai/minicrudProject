@@ -15,6 +15,7 @@
 
 <body>
     <main>
+
         <div class="indexreserverencontainer">
             <div class="indexreserveren">
                 <a class="reserverenAhref" href="reserveren.php">Reserveren</a>
