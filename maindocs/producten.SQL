@@ -20,7 +20,8 @@ CREATE TABLE IF NOT EXISTS `producten` (
 INSERT INTO `producten` (`id`, `name`, `image`, `price`) VALUES
                                                              (1, 'Sushi Zalm', 'eten1.jpg', 14.99),
                                                              (2, 'Sushi Dragonball', 'eten2.jpg', 19.99),
-                                                             (3, 'Sushi Tonijn', 'eten3.jpg', 3.99);
+                                                             (3, 'Sushi Tonijn', 'eten3.jpg', 3.99),
+                                                             (4, 'Loempia 3x', 'eten4.jpg', 9.99);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

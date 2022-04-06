@@ -15,45 +15,49 @@
 
 <body>
 
-    <?php
+
+<?php
+    session_start();
+    if (!isset($_GET['voltooid']) || empty($_SESSION["winkelwagen"])) {
+        header('Location: bestellen.php');
+    }
+?>
+
+<?php
 include_once('../maindocs/dbcontroller.php');
-session_start();
 $randomnummer = rand(1000, 9999);
 echo "Bedankt voor uw bestelling! Hier uw order nummer  #" . $randomnummer;
 
 
-
 ?>
 
-    <?php
-if(!empty($_SESSION["winkelwagen"]))
-{
+<?php
+if (!empty($_SESSION["winkelwagen"])) {
     $total = 0;
-    foreach($_SESSION["winkelwagen"] as $keys => $values)
-    {
+    foreach ($_SESSION["winkelwagen"] as $keys => $values) {
         ?>
-    <tr>
-        <div>
-            <td><?php echo $values["item_name"]; ?></td>
-        </div>
-        <div>
-            <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
-        </div>
-    </tr>
-    <?php
+        <tr>
+            <div>
+                <td><?php echo $values["item_name"]; ?></td>
+            </div>
+            <div>
+                <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>
+            </div>
+        </tr>
+        <?php
         $total = $total + ($values["item_quantity"] * $values["item_price"]);
     }
     ?>
     <tr>
-        <td colspan="3" align="right">Total</td>
-        <td align="right">$ <?php echo number_format($total, 2); ?></td>
+        <td colspan="3" align="right">Totaal</td>
+        <td align="right">€ <?php echo number_format($total, 2); ?></td>
         <td></td>
     </tr>
     <?php
 }
 session_destroy();
-echo "Redirecting in 5 seconden.";
-header("Refresh:5; url=index.php");
+echo "Redirecting in 10 seconden.";
+header("Refresh:10; url=index.php");
 ?>
 
 </body>

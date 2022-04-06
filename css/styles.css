@@ -469,7 +469,7 @@ a:hover {
 }
 
 @media screen and (max-width: 927px) {
-  .img-responsive {
+  .plaatjeresponsive {
     display: none;
   }
 }
