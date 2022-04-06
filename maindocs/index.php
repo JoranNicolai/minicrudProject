@@ -14,53 +14,54 @@
 </head>
 
 <body>
-    <main>
+<main>
 
-        <div class="indexreserverencontainer">
-            <div class="indexreserveren">
-                <a class="reserverenAhref" href="reserveren.php">Reserveren</a>
-            </div>
-            <button class="pauzebutton" id="pauzebutton" onclick="Pauzeren()"><img class="pauzebuttonimg"  src="../pictures/pauzebutton.png" alt="pauze knop"></button>
+    <div class="indexreserverencontainer">
+        <div class="indexreserveren">
+            <a class="reserverenAhref" href="reserveren.php">Reserveren</a>
         </div>
-        <div class="indexcontainer">
-            <img class="indexlogo" src="../pictures/indexlogo.png" alt="">
-        </div>
-        <video autoplay muted loop id="video">
-            <source src=../pictures/sushi.mp4 type="video/mp4">
-        </video>
+        <button class="pauzebutton" id="pauzebutton" onclick="Pauzeren()"><img class="pauzebuttonimg"
+                                                                               src="../pictures/pauzebutton.png"
+                                                                               alt="pauze knop"></button>
+    </div>
+    <div class="indexcontainer">
+        <img class="indexlogo" src="../pictures/indexlogo.png" alt="">
+    </div>
+    <video autoplay muted loop id="video">
+        <source src=../pictures/sushi.mp4 type="video/mp4">
+    </video>
 
-        <div class="headercontent">
-            <header>
-                <div class="headerindex">
-                    <div class="header-right">
-                        <a class="active" href="index.php">Home</a>
-                        <a href="reserveren.php">Reserveren</a>
-                        <a href="bestellen.php">Bestellen</a>
-                        <a href="overons.php">Over ons</a>
-                        <a href="contact.php">Contact</a>
-                        <a href="login.php">Inloggen / Aanmelden</a>
-                    </div>
+    <div class="headercontent">
+        <header>
+            <div class="headerindex">
+                <div class="header-right">
+                    <a class="active" href="index.php">Home</a>
+                    <a href="reserveren.php">Reserveren</a>
+                    <a href="bestellen.php">Bestellen</a>
+                    <a href="overons.php">Over ons</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="login.php">Inloggen / Aanmelden</a>
                 </div>
-            </header>
-        </div>
-    </main>
+            </div>
+        </header>
+    </div>
+</main>
 
 
+<script src="scripts.js"></script>
 
-    <script src="scripts.js"></script>
+<script>
+    var pauzebutton = document.getElementById("pauzebutton");
+    var video = document.getElementById("video");
 
-    <script>
-        var pauzebutton = document.getElementById("pauzebutton");
-        var video = document.getElementById("video");
-
-        function Pauzeren() {
-            if (video.paused) {
-                video.play();
-            } else {
-                video.pause();
-            }
+    function Pauzeren() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
         }
-    </script>
+    }
+</script>
 
 </body>
 

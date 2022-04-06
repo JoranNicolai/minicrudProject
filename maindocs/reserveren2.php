@@ -1,10 +1,14 @@
 <?php
-class Reservation {
+
+class Reservation
+{
     // connect naar database
     private $pdo;
     private $stmt;
     public $error;
-    function __construct() {
+
+    function __construct()
+    {
         try {
             $this->pdo = new PDO(
                 "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET,
@@ -13,17 +17,21 @@ class Reservation {
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_NAMED
                 ]
             );
-        } catch (Exception $ex) { exit($ex->getMessage()); }
+        } catch (Exception $ex) {
+            exit($ex->getMessage());
+        }
     }
 
     // disconnect naar database
-    function __destruct() {
+    function __destruct()
+    {
         $this->pdo = null;
         $this->stmt = null;
     }
 
     // reservatie opslaan
-    function save ($date, $slot, $name, $email, $tel, $notes="") {
+    function save($date, $slot, $name, $email, $tel, $notes = "")
+    {
 
         try {
             $this->stmt = $this->pdo->prepare(
@@ -42,8 +50,11 @@ class Reservation {
     }
 
     // reservaties van de dagen
-    function getDay ($day="") {
-        if ($day=="") { $day = date("Y-m-d"); }
+    function getDay($day = "")
+    {
+        if ($day == "") {
+            $day = date("Y-m-d");
+        }
 
         $this->stmt = $this->pdo->prepare(
             "SELECT * FROM `reservations` WHERE `res_date`=?"
