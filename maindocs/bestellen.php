@@ -5,8 +5,12 @@ session_start();
 $connect = mysqli_connect("localhost", "root", "", "bestelsysteem");
 
 if (isset($_POST["toevoegenwinkelwagen"])) {
+
+
     if (isset($_SESSION["winkelwagen"])) {
         $item_array_id = array_column($_SESSION["winkelwagen"], "item_id");
+        
+
         if (!in_array($_GET["id"], $item_array_id)) {
             $count = count($_SESSION["winkelwagen"]);
             $item_array = array(
@@ -17,7 +21,9 @@ if (isset($_POST["toevoegenwinkelwagen"])) {
             );
             $_SESSION["winkelwagen"][$count] = $item_array;
         }
-    } else {
+    }
+
+    else {
         $item_array = array(
             'item_id' => $_GET["id"],
             'item_name' => $_POST["hidden_name"],
@@ -66,7 +72,7 @@ if (isset($_GET["action"])) {
 
 <body class="bestellenbody">
 <br/>
-<div class="containerbestellenouter">
+<div class="">
 
     <!--Sql query en numrows-->
 
@@ -78,9 +84,8 @@ if (isset($_GET["action"])) {
             ?>
 
             <!--Formsss-->
-
-            <div class="">
-                <form method="post" action="bestellen.php?action=add&id=<?php echo $row["id"]; ?>">
+            <div class="containerbestellenouter">
+                <form class="formbestellen" method="post" action="bestellen.php?action=add&id=<?php echo $row["id"]; ?>">
                     <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;"
                          align=center>
                         <img src="../pictures/<?php echo $row["image"]; ?>" class="plaatjeresponsive"/><br/>
@@ -145,10 +150,10 @@ if (isset($_GET["action"])) {
                 <?php
             }
             ?>
+            W
 
         </table>
     </div>
-</div>
 </div>
 <br/>
 
