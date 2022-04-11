@@ -29,7 +29,7 @@
 <?php
 // Reservatie proces
 if (isset($_POST["date"])) {
-    require "reserveren2.php";
+    require "2-reserve.php";
     if ($_RSV->save(
         $_POST["date"], $_POST["slot"], $_POST["name"],
         $_POST["email"], $_POST["tel"], $_POST["notes"])) {

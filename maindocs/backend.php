@@ -1,9 +1,9 @@
 <?php
 
 session_start();
+ 
 
-
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
@@ -18,14 +18,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="icon" href="/minicrudProject/pictures/image.jpg">
     <link rel="stylesheet" href="/minicrudProject/css/backend.css">
     <style>
-        body {
-            font: 14px sans-serif;
-            text-align: center;
-        }
+    body {
+        font: 14px sans-serif;
+        text-align: center;
+    }
 
-        .bigcontainer {
-            background-image: url(../pictures/background.jpg);
-        }
+    .bigcontainer {
+        background-image: url(../pictures/background.jpg);
+    }
 
 
     </style>
@@ -47,20 +47,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <div class="bigcontainer">
 
         <div class="middlecontainer">
-            <div class="buttonmid">
-                <button><a class="h1reservering" href="producten.php">Producten Toevoegen</a></button>
-            </div>
+            <div class="buttonmid"><button><a class="h1reservering" href="producten.php">Producten Toevoegen</a></button></div>
 
         </div>
         <div class="middlecontainer">
-            <div class="buttonmid">
-                <button><a class="h1reservering" href="reserveringen.php">Reserveringen</a></button>
+            <div class="buttonmid"><button><a class="h1reservering" href="reserveringen.php">Reserveringen</a></button>
             </div>
         </div>
         <div class="middlecontainer">
-            <div class="buttonmid">
-                <button><a class="h1reservering" href="accounts.php">Accounts</a></button>
-            </div>
+            <div class="buttonmid"><button><a class="h1reservering" href="accounts.php">Accounts</a></button></div>
         </div>
     </div>
 
