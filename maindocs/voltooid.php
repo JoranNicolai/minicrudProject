@@ -15,17 +15,14 @@
 
 <body>
 
-<!--    --><?php
-if(isset($_POST['verzendenvoltooid'])) {
-    echo "werkt";
-    header('Location: voltooid.php');
-} else {
+<?php
+session_start();
+if (!isset($_GET['voltooid']) || empty($_SESSION["winkelwagen"])) {
     header('Location: bestellen.php');
 }
 ?>
 
-    <?php
-session_start();
+<?php
 $randomnummer = rand(1000, 9999);
 echo "Bedankt voor uw bestelling! Hier uw order nummer  #" . $randomnummer;
 
