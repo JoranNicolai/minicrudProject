@@ -137,7 +137,7 @@ if (isset($_GET["action"])) {
                 ?>
                 <div class="bestellenbuttonouter">
                     <a class="bestellenhref" href="voltooid.php?voltooid=1">
-                        <button name="verzend   envoltooid" class="bestellenbutton">Bestellen</button>
+                        <button name="verzendenvoltooid" class="bestellenbutton">Bestellen</button>
                     </a>
                 </div>
                 <tr class="bestellentr">
@@ -148,7 +148,7 @@ if (isset($_GET["action"])) {
                 <?php
             }
             ?>
-                W
+
 
             </table>
         </div>
