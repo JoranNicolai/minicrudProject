@@ -47,7 +47,7 @@
 
 
 
-    <script src="../js/scripts.js"></script>
+    <script src="scripts.js"></script>
 
     <script>
         var pauzebutton = document.getElementById("pauzebutton");
