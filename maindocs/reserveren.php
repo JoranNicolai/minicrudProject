@@ -14,13 +14,13 @@
 </head>
 
 <style>
-    .reserverenbody {
-        background-image: url(../pictures/booking.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: auto;
-    }
+.reserverenbody {
+    background-image: url(../pictures/booking.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
 </style>
 
 <body class="reserverenbody">
@@ -29,7 +29,7 @@
     <?php
 // Reservatie proces
 if (isset($_POST["date"])) {
-    require "2-reserve.php";
+    require "reserveren2.php";
     if ($_RSV->save(
         $_POST["date"], $_POST["name"],
         $_POST["email"], $_POST["tel"], $_POST["notes"])) {

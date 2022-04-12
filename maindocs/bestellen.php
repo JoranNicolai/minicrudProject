@@ -1,43 +1,45 @@
 <!--Array-->
-
 <?php
 session_start();
+
+//Connectie met database
 $connect = mysqli_connect("localhost", "root", "", "bestelsysteem");
 
+// of toevoegenwinkelwagen is ingedrukt
 if (isset($_POST["toevoegenwinkelwagen"])) {
 
-
+// session winkelwagen returnen in een arraycolumn
     if (isset($_SESSION["winkelwagen"])) {
-        $item_array_id = array_column($_SESSION["winkelwagen"], "item_id");
+        $id_vanitemarray = array_column($_SESSION["winkelwagen"], "etenproduct_id");
         
-
-        if (!in_array($_GET["id"], $item_array_id)) {
+// tel alles van array producten_array op
+        if (!in_array($_GET["id"], $id_vanitemarray)) {
             $count = count($_SESSION["winkelwagen"]);
-            $item_array = array(
-                'item_id' => $_GET["id"],
-                'item_name' => $_POST["hidden_name"],
-                'item_price' => $_POST["hidden_price"],
-                'item_quantity' => $_POST["quantity"]
+            $producten_array = array(
+                'etenproduct_id' => $_GET["id"],
+                'etenproduct_naam' => $_POST["hidden_name"],
+                'etenproduct_prijs' => $_POST["hidden_price"],
+                'etenproduct_hoeveelheid' => $_POST["quantity"]
             );
-            $_SESSION["winkelwagen"][$count] = $item_array;
+            $_SESSION["winkelwagen"][$count] = $producten_array;
         }
     }
-
+// winkelwagen op 0 niks erin
     else {
-        $item_array = array(
-            'item_id' => $_GET["id"],
-            'item_name' => $_POST["hidden_name"],
-            'item_price' => $_POST["hidden_price"],
-            'item_quantity' => $_POST["quantity"]
+        $producten_array = array(
+            'etenproduct_id' => $_GET["id"],
+            'etenproduct_naam' => $_POST["hidden_name"],
+            'etenproduct_prijs' => $_POST["hidden_price"],
+            'etenproduct_hoeveelheid' => $_POST["quantity"]
         );
-        $_SESSION["winkelwagen"][0] = $item_array;
+        $_SESSION["winkelwagen"][0] = $producten_array;
     }
 }
-
+// verwijdert uiteindelijke de variables in winkelwagen
 if (isset($_GET["action"])) {
     if ($_GET["action"] == "delete") {
         foreach ($_SESSION["winkelwagen"] as $keys => $values) {
-            if ($values["item_id"] == $_GET["id"]) {
+            if ($values["etenproduct_id"] == $_GET["id"]) {
                 unset($_SESSION["winkelwagen"][$keys]);
             }
         }
@@ -123,16 +125,18 @@ if (isset($_GET["action"])) {
                 foreach ($_SESSION["winkelwagen"] as $keys => $values) {
                     ?>
                 <tr class="bestellentr">
-                    <td><?php echo $values["item_name"]; ?></td>
-                    <td><?php echo $values["item_quantity"]; ?></td>
-                    <td>€ <?php echo $values["item_price"]; ?></td>
-                    <td>€ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>
+                    <td><?php echo $values["etenproduct_naam"]; ?></td>
+                    <td><?php echo $values["etenproduct_hoeveelheid"]; ?></td>
+                    <td>€ <?php echo $values["etenproduct_prijs"]; ?></td>
+                    <td>€
+                        <?php echo number_format($values["etenproduct_hoeveelheid"] * $values["etenproduct_prijs"], 2); ?>
+                    </td>
                     <td><a class="verwijderen"
-                            href="bestellen.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span
+                            href="bestellen.php?action=delete&id=<?php echo $values["etenproduct_id"]; ?>"><span
                                 class="text-danger">Verwijderen</span></a></ < /td>
                 </tr>
                 <?php
-                    $total = $total + ($values["item_quantity"] * $values["item_price"]);
+                    $total = $total + ($values["etenproduct_hoeveelheid"] * $values["etenproduct_prijs"]);
                 }
                 ?>
                 <div class="bestellenbuttonouter">

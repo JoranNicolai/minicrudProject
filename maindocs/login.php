@@ -8,7 +8,6 @@
      exit;
  }
  
-
  require_once "config.php";
  
 
@@ -102,14 +101,14 @@
     <link rel="icon" href="/minicrudProject/pictures/image.jpg">
     <title>Restaurant - Inloggen / Aanmelden</title>
     <style>
-        .loginbody {
-            background-image: url(../pictures/loginimage.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: auto;
+    .loginbody {
+        background-image: url(../pictures/loginimage.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
 
-        }
+    }
     </style>
 </head>
 

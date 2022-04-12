@@ -3,11 +3,11 @@
 require_once "config.php";
 
 
-// Definieer variabelen en initialiseer met lege waarden
+// maak var's aan voor user's
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
 
-// Formuliergegevens verwerken wanneer formulier wordt ingediend
+// als de 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Validate username
@@ -111,13 +111,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Restaurant - Registreren</title>
 
     <style>
-        .registerbody {
-            background-image: url(../pictures/registerimage.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: auto;
-        }
+    .registerbody {
+        background-image: url(../pictures/registerimage.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: auto;
+    }
     </style>
 
 </head>
@@ -125,38 +125,38 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body class="registerbody">
 
     <main>
-            <div class="omheensignup">
-                <div class="formsregister">
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <div class="omheensignup">
+            <div class="formsregister">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-                        <div class="formss">
-                            <label>Naam</label>
-                            <input type="text" name="username"
-                                class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
-                                value="<?php echo $username; ?>">
-                            <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                        </div>
-                        <div class="forms-kleiner">
-                            <label>Wachtwoord</label>
-                            <input type="password" name="password"
-                                class="forms-kleiner <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
-                                value="<?php echo $password; ?>">
-                            <span class="onjuiste-error"><?php echo $password_err; ?></span>
-                        </div>
-                        <div class="forms-kleiner">
-                            <label>Wachtwoord opnieuw</label>
-                            <input type="password" name="confirm_password"
-                                class="forms-kleiner <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
-                                value="<?php echo $confirm_password; ?>">
-                            <span class="onjuiste-error"><?php echo $confirm_password_err; ?></span>
-                        </div>
-                        <div class="submitouter" <div class="submitinput">
-                            <input type="submit" class="submitinput" value="Registreren" name="test1">
-                        </div>
+                    <div class="formss">
+                        <label>Naam</label>
+                        <input type="text" name="username"
+                            class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>"
+                            value="<?php echo $username; ?>">
+                        <span class="invalid-feedback"><?php echo $username_err; ?></span>
+                    </div>
+                    <div class="forms-kleiner">
+                        <label>Wachtwoord</label>
+                        <input type="password" name="password"
+                            class="forms-kleiner <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>"
+                            value="<?php echo $password; ?>">
+                        <span class="onjuiste-error"><?php echo $password_err; ?></span>
+                    </div>
+                    <div class="forms-kleiner">
+                        <label>Wachtwoord opnieuw</label>
+                        <input type="password" name="confirm_password"
+                            class="forms-kleiner <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>"
+                            value="<?php echo $confirm_password; ?>">
+                        <span class="onjuiste-error"><?php echo $confirm_password_err; ?></span>
+                    </div>
+                    <div class="submitouter" <div class="submitinput">
+                        <input type="submit" class="submitinput" value="Registreren" name="test1">
+                    </div>
 
-                </div>
-                </form>
             </div>
+            </form>
+        </div>
         </div>
 
     </main>
