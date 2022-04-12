@@ -20,7 +20,8 @@
             <div class="indexreserveren">
                 <a class="reserverenAhref" href="reserveren.php">Reserveren</a>
             </div>
-            <button class="pauzebutton" id="pauzebutton" onclick="Pauzeren()"><img class="pauzebuttonimg"  src="../pictures/pauzebutton.png" alt="pauze knop"></button>
+            <button class="pauzebutton" id="pauzebutton" onclick="Pauzeren()"><img class="pauzebuttonimg"
+                    src="../pictures/pauzebutton.png" alt="pauze knop"></button>
         </div>
         <div class="indexcontainer">
             <img class="indexlogo" src="../pictures/indexlogo.png" alt="">
@@ -50,16 +51,16 @@
     <script src="scripts.js"></script>
 
     <script>
-        var pauzebutton = document.getElementById("pauzebutton");
-        var video = document.getElementById("video");
+    var pauzebutton = document.getElementById("pauzebutton");
+    var video = document.getElementById("video");
 
-        function Pauzeren() {
-            if (video.paused) {
-                video.play();
-            } else {
-                video.pause();
-            }
+    function Pauzeren() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
         }
+    }
     </script>
 
 </body>

@@ -7,20 +7,18 @@ require_once "config.php";
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
 
-// als de 
+// $server requestmethod om toegang te krijgen. (gebruikt om array met informatie in te stoppen)
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-    // Validate username
+    // username checken als leeg is dan geef je variable $username_err die meld een error aan.
     if(empty(trim($_POST["username"]))){
         $username_err = "Voer een gebruikersnaam in.";
-    } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))){
-        $username_err = "De gebruikersnaam mag alleen letters, cijfers en underscores bevatten.";
     } else{
-        // select statement
+        // selecteer id van users waar de username input is
         $sql = "SELECT id FROM users WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
+            // geef de variables door aan nieuwe statement
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             
 
